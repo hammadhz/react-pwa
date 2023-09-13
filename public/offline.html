@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offline Page</title>
+    <style>
+      .offline {
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .offline-msg {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: serif;
+        font-style: italic;
+        color: #000000;
+      }
+      .offline_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+      .msg-box {
+        background-color: #c4c4c4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 30px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="offline">
+      <div class="offline_content">
+        <img src="./imgs/egold144.png" alt="egold" />
+        <img src="./imgs/no_wifi.png" alt="no wifi" />
+
+        <div class="msg-box">
+          <p class="offline-msg">You are offline please connect to internet.</p>
+        </div>
+      </div>
+    </section>
+    <!-- <div
+      style="
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div style="background-color: cyan; padding: 40px 40px">
+        <p>You are offline please connect to internet.</p>
+      </div>
+    </div> -->
+  </body>
+</html>
