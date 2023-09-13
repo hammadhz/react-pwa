@@ -1,11 +1,6 @@
 //STORAGE OF BROWSER
 const CACHE_NAME = "version-1";
-const urlsToCache = [
-  "index.html",
-  "offline.html",
-  "imgs/egold144.png",
-  "imgs/no_wifi.png",
-];
+const urlsToCache = ["index.html", "offline.html", "imgs/no_wifi.png"];
 const self = this;
 
 self.addEventListener("install", (event) => {
@@ -19,7 +14,10 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    caches.match(event.request).then(() => {
+    caches.match(event.request).then((response) => {
+      if (response) {
+        return response;
+      }
       return fetch(event.request).catch(() => caches.match("offline.html"));
     })
   );
